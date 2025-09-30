@@ -23,15 +23,16 @@ import {
   formatMessageForAPI,
   isValidMessage,
 } from './utils';
+
 import axios from 'axios';
 import { MESSAGE_ROLES } from '../constants/playground.constants';
 
 export let API = axios.create({
-  baseURL: import.meta.env.VITE_REACT_APP_SERVER_URL
-    ? import.meta.env.VITE_REACT_APP_SERVER_URL
-    : '',
+  baseURL: 'https://new-api-api.aiecnu.net',
+  withCredentials: true, // 允许跨域请求携带 cookie
   headers: {
     'New-API-User': getUserIdFromLocalStorage(),
+     'Authorization': localStorage.getItem('token'),
     'Cache-Control': 'no-store',
   },
 });
@@ -68,11 +69,11 @@ patchAPIInstance(API);
 
 export function updateAPI() {
   API = axios.create({
-    baseURL: import.meta.env.VITE_REACT_APP_SERVER_URL
-      ? import.meta.env.VITE_REACT_APP_SERVER_URL
-      : '',
+    baseURL:  'https://new-api-api.aiecnu.net',
+    withCredentials: true, // 允许跨域请求携带 cookie
     headers: {
       'New-API-User': getUserIdFromLocalStorage(),
+      'Authorization': localStorage.getItem('token'),
       'Cache-Control': 'no-store',
     },
   });
@@ -81,7 +82,11 @@ export function updateAPI() {
 }
 
 API.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    const token = response.data.token;
+    localStorage.setItem('token',token)
+    return response;
+  },
   (error) => {
     // 如果请求配置中显式要求跳过全局错误处理，则不弹出默认错误提示
     if (error.config && error.config.skipErrorHandler) {

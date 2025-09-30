@@ -188,6 +188,7 @@ export const useApiRequest = (
           headers: {
             'Content-Type': 'application/json',
             'New-Api-User': getUserIdFromLocalStorage(),
+            'Authorization':localStorage.getItem('token')
           },
           body: JSON.stringify(payload),
         });

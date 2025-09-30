@@ -57,9 +57,9 @@ export const DEBUG_TABS = {
 
 // ========== API 相关常量 ==========
 export const API_ENDPOINTS = {
-  CHAT_COMPLETIONS: '/pg/chat/completions',
-  USER_MODELS: '/api/user/models',
-  USER_GROUPS: '/api/user/self/groups',
+  CHAT_COMPLETIONS: 'https://new-api-api.aiecnu.net/pg/chat/completions',
+  USER_MODELS: 'https://new-api-api.aiecnu.net/api/user/models',
+  USER_GROUPS: 'https://new-api-api.aiecnu.net/api/user/self/groups',
 };
 
 // ========== 配置默认值 ==========
