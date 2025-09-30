@@ -20,6 +20,7 @@ For commercial licensing, please contact support@quantumnous.com
 import react from '@vitejs/plugin-react';
 import { defineConfig, transformWithEsbuild } from 'vite';
 import pkg from '@douyinfe/vite-plugin-semi';
+import { codeInspectorPlugin } from "code-inspector-plugin";
 const { vitePluginSemi } = pkg;
 
 // https://vitejs.dev/config/
@@ -43,6 +44,9 @@ export default defineConfig({
     react(),
     vitePluginSemi({
       cssLayer: true,
+    }),
+    codeInspectorPlugin({
+      bundler: 'vite',
     }),
   ],
   optimizeDeps: {
