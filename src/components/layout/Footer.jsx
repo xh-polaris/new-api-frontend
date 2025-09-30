@@ -163,7 +163,7 @@ const FooterBar = () => {
 
               <div className='text-left'>
                 <p className='!text-semi-color-text-0 font-semibold mb-5'>
-                  {t('基于New API的项目')}
+                  {t('基于Inno Api的项目')}
                 </p>
                 <div className='flex flex-col gap-4'>
                   <a
@@ -198,7 +198,7 @@ const FooterBar = () => {
               rel='noopener noreferrer'
               className='!text-semi-color-primary font-medium'
             >
-              New API
+              Inno Api
             </a>
             <span className='!text-semi-color-text-1'> & </span>
             <a
