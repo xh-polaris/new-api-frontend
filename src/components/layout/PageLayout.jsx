@@ -78,6 +78,7 @@ const PageLayout = () => {
     try {
       const res = await API.get('/api/status');
       const { success, data } = res.data;
+      data.docs_link = 'https://beta.aiecnu.cn/docs'
       if (success) {
         statusDispatch({ type: 'set', payload: data });
         setStatusData(data);
