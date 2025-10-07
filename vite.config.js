@@ -41,12 +41,12 @@ export default defineConfig({
         });
       },
     },
+    codeInspectorPlugin({
+      bundler: 'vite',
+    }),
     react(),
     vitePluginSemi({
       cssLayer: true,
-    }),
-    codeInspectorPlugin({
-      bundler: 'vite',
     }),
   ],
   optimizeDeps: {

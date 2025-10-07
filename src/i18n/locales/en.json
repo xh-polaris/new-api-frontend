@@ -1426,7 +1426,7 @@
   "表单引用错误，请刷新页面重试": "Form reference error, please refresh the page and try again",
   "初始化系统": "Initialize system",
   "支持众多的大模型供应商": "Supporting various LLM providers",
-  "统一的大模型接口网关": "The Unified LLMs API Gateway",
+  "统一的InnoSpark接口网关": "The Unified Innospark LLMs API Gateway",
   "更好的价格，更好的稳定性，只需要将模型基址替换为：": "Better price, better stability, no subscription required, just replace the model BASE URL with: ",
   "获取密钥": "Get Key",
   "关于我们": "About Us",

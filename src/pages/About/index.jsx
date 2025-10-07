@@ -59,7 +59,7 @@ const About = () => {
     padding: '24px',
   };
 
-  const customDescription = (
+  const customDescription = false && (
     <div style={{ textAlign: 'center' }}>
       <p>{t('可在设置页面设置关于内容，支持 HTML & Markdown')}</p>
       {t('Inno Api项目仓库地址：')}
