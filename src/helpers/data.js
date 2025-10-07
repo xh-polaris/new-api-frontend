@@ -48,6 +48,7 @@ export function setStatusData(data) {
     localStorage.removeItem('chat_link2');
   }
   if (data.docs_link) {
+    console.log(data)
     localStorage.setItem('docs_link', data.docs_link);
   } else {
     localStorage.removeItem('docs_link');

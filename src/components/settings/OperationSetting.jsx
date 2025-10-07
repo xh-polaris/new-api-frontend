@@ -38,7 +38,7 @@ const OperationSetting = () => {
 
     /* 通用设置 */
     TopUpLink: '',
-    'general_setting.docs_link': '',
+    'general_setting.docs_link': 'https://beta.aiecnu.cn/docs',
     QuotaPerUnit: 0,
     USDExchangeRate: 0,
     RetryTimes: 0,
