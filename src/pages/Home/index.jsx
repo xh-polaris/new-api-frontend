@@ -189,7 +189,7 @@ const Home = () => {
                       </>
                     ) : (
                       <>
-                        <span className='shine-text'>大模型接口网关</span>
+                        <span className='shine-text'>教育大模型接口网关</span>
                       </>
                     )}
                   </h1>
