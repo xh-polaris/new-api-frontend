@@ -185,7 +185,7 @@ const Home = () => {
                     </div>
                     {i18n.language === 'en' ? (
                       <>
-                        <span className='shine-text'>LLM API Gateway</span>
+                        <span className='shine-text'>Education LLM API Gateway</span>
                       </>
                     ) : (
                       <>
