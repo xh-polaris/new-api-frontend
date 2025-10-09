@@ -325,7 +325,7 @@ const TopUp = () => {
           }
 
           // 初始化显示实付金额
-          getAmount(minTopUpValue);
+          // getAmount(minTopUpValue);
         } catch (e) {
           console.log('解析支付方式失败:', e);
           setPayMethods([]);
