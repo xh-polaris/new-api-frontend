@@ -386,6 +386,9 @@ export function getLobeHubIcon(iconName, size = 14) {
     (typeof IconComponent !== 'function' && typeof IconComponent !== 'object')
   ) {
     const firstLetter = String(iconName).charAt(0).toUpperCase();
+    if(iconName.toLowerCase().includes('innospark')) {
+      return <Avatar src='/logo.png' size='extra-extra-small' />;
+    }
     return <Avatar size='extra-extra-small'>{firstLetter}</Avatar>;
   }
 
