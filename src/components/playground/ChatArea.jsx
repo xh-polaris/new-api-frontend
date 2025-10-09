@@ -100,6 +100,12 @@ const ChatArea = ({
           chatBoxRenderConfig={{
             renderChatBoxContent: renderCustomChatContent,
             renderChatBoxAction: renderChatBoxAction,
+            renderChatBoxAvatar: (props) => {
+              console.log(props);
+              if(props.message.role === 'assistant')
+                return <img src='/logo.png' alt='innospark logo' className='h-6' />;
+              return props.defaultAvatar;
+            },
             renderChatBoxTitle: () => null,
           }}
           renderInputArea={renderInputArea}
