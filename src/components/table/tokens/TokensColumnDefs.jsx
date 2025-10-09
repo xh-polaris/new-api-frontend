@@ -173,13 +173,16 @@ const renderModelLimits = (text, record, t) => {
             position='top'
             showArrow
           >
-            <Avatar
-              size='extra-extra-small'
-              alt={category.label}
-              color='transparent'
-            >
-              {category.icon}
-            </Avatar>
+            {category.label === 'InnoSpark'
+              ? category.icon
+              : <Avatar
+                size='extra-extra-small'
+                alt={category.label}
+                color='transparent'
+              >
+                {category.icon}
+              </Avatar>
+            }
           </Tooltip>,
         );
         vendorModels.forEach((m) => matchedModels.add(m));

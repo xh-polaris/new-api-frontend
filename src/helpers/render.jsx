@@ -203,7 +203,7 @@ export const getModelCategories = (() => {
       xunfei: {
         label: t('讯飞星火'),
         icon: <Spark.Color />,
-        filter: (model) => model.model_name.toLowerCase().includes('spark'),
+        filter: (model) => model.model_name.toLowerCase().includes('spark') && !model.model_name.toLowerCase().includes('innospark'),
       },
       midjourney: {
         label: 'Midjourney',
