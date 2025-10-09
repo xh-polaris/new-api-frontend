@@ -158,6 +158,11 @@ export const getModelCategories = (() => {
         icon: <Claude.Color />,
         filter: (model) => model.model_name.toLowerCase().includes('claude'),
       },
+      innospark: {
+        label: 'InnoSpark',
+        icon: <img src='/logo.png' alt='innospark logo' className='h-4' />,
+        filter: (model) => model.model_name.toLowerCase().includes('innospark'),
+      },
       gemini: {
         label: 'Gemini',
         icon: <Gemini.Color />,
